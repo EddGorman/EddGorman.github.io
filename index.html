@@ -1,0 +1,45 @@
+---
+layout: default
+title: Home
+---
+<article>
+  <hr/>
+  <header class="article-header">
+  <h3 class="page-title">About Me</h3>
+  <div class="row">
+    <div class="col-md-4">
+      <img class="img-fluid avatar rounded mx-auto d-block" src="assets/images/avatars/EddGorman.jpg" alt="">
+    </div>
+    <div class="col-md-8">
+      <p class="lead">
+      My name is Edd. I’m a games programmer from Dundee, Scotland.
+      </p>
+      <p class="lead">
+      I graduated from the University of Abertay in 2014 after a four year course studying BSc Computer Games Technology.
+
+      I'm currently working as a programmer for <a href="https://stormcloudgames.com/">Stormcloud Games</a>.
+      </p>
+    </div>
+  </div>
+  </header>
+  <hr/>
+  <section class="entry-content cf" itemprop="articleBody">
+    <article>
+    {% include carousel.html %}
+    </article>
+    <hr>
+    <h2>Recent Projects</h2>
+    <div class="row wrap">
+      {% assign items = site.projects | sort: 'date' | reverse %}
+      {% for item in items limit:3 %}
+        <div class="row wrap ml-2 mr-2">
+          <h3 class="publication-header">
+            <a href="{{ item.url }}">
+              {{ item.title }}
+            </a>
+          </h3>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+</article>

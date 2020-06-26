@@ -1,0 +1,20 @@
+
+<link rel="stylesheet" href="/responsive-nav.css">
+<script src="/responsive-nav.js"></script>
+
+<header class="header" role="banner">
+	<div id="inner-header" class="wrap_nav">
+    <nav class="nav-collapse">
+      <ul>
+        {% for item in site.data.navbar %}
+        <li><a href="{{ item.link }}" data-hover="{{ item.name }}">{{ item.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <div class="page-logos">
+      <div class="navbar-branding"><a href="\" rel="nofollow">Edward Gorman</a></div>
+       <a href="#"><div id="nav-toggle" class="icon-open"><div class="invisible">Menu</div></div></a>
+			<p class="site-tagline">Games Programmer/Developer</p>
+    </div>
+		</div>
+</header>
